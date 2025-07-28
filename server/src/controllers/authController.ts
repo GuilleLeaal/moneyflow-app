@@ -9,7 +9,6 @@ const JWT_SECRET = process.env.JWT_SECRET || 'supersecreto123'; // ⚠️ Usar v
 export const register = async (req: Request, res: Response) => {
   const { username, password } = req.body;
 
-  // Validaciones explícitas
   if (!username || !password) {
     return res.status(400).json({ error: 'Todos los campos son obligatorios' });
   }
@@ -46,7 +45,6 @@ export const register = async (req: Request, res: Response) => {
 export const login = async (req: Request, res: Response) => {
   const { username, password } = req.body;
 
-  // Validación básica
   if (!username || !password) {
     return res.status(400).json({ error: 'Todos los campos son obligatorios' });
   }

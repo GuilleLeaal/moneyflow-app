@@ -1,4 +1,3 @@
-// src/components/Topbar.tsx
 import styles from '../styles/topbar.module.css';
 import { FaMoon, FaSun, FaSignOutAlt } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext';
