@@ -37,3 +37,27 @@
 .main::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    position: relative;
+  }
+
+  .contentArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+}

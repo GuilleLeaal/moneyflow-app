@@ -47,3 +47,46 @@
   background: var(--primary);
   color: #fff;
 }
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Sidebar responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 240px;
+    height: 100%;
+    background: var(--bg-sidebar);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 2rem 1rem;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+}

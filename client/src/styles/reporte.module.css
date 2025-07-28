@@ -6,17 +6,9 @@
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .title {
@@ -24,16 +16,14 @@
   font-weight: bold;
   color: var(--text-main);
   text-align: center;
-  margin-bottom: 2rem;
-  animation: fadeIn 1s ease;
 }
 
-.filtros {
+.filtros,
+.fechas {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .filtros button {
@@ -47,37 +37,27 @@
   font-weight: 500;
 }
 
-.filtros button:hover {
-  background-color: var(--bg-hover);
-}
-
 .filtros .active {
   background-color: var(--primary);
   color: white;
-  font-weight: bold;
-}
-
-.fechas {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  animation: fadeIn 0.6s ease;
 }
 
 .fechas label {
   color: var(--text-main);
   font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
 }
 
 .fechas input[type="date"] {
   padding: 0.4rem 0.6rem;
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 1rem;
   background-color: var(--bg-main);
   color: var(--text-main);
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
 }
 
 .chartContainer {
@@ -85,18 +65,17 @@
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  animation: fadeIn 1.2s ease;
+  overflow-x: auto;
 }
 
 .tablaContainer {
-  margin-top: 3rem;
-  animation: fadeIn 1s ease-in-out;
+  overflow-x: auto;
 }
 
 .subtitulo {
   font-size: 1.4rem;
-  margin-bottom: 1rem;
   text-align: center;
+  margin-bottom: 1rem;
   color: var(--text-main);
 }
 
@@ -105,8 +84,8 @@
   border-collapse: collapse;
   background-color: var(--bg-main);
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
 .tabla th,
@@ -120,13 +99,11 @@
 
 .tabla th {
   background-color: var(--bg-hover);
-  color: var(--text-main);
   font-weight: 600;
 }
 
 .tabla tr:hover {
   background-color: var(--bg-hover);
-  transition: background 0.3s ease;
 }
 
 .ingreso {
@@ -140,9 +117,36 @@
 }
 
 .sinDatos {
-  margin-top: 2rem;
   text-align: center;
   color: var(--text-sidebar);
   font-style: italic;
-  animation: fadeIn 0.5s ease-in;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .chartContainer {
+    padding: 1rem;
+  }
+
+  .tabla th,
+  .tabla td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .filtros button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .fechas input[type="date"] {
+    font-size: 0.9rem;
+  }
+
+  .subtitulo {
+    font-size: 1.2rem;
+  }
 }
