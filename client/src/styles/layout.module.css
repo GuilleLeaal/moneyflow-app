@@ -1,0 +1,41 @@
+/* src/styles/layout.module.css */
+
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow: hidden;
+}
+
+.contentArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-light);
+  border-left: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--bg-main);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.main::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 3px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: transparent;
+}

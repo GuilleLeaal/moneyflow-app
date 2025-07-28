@@ -1,0 +1,40 @@
+/* Reset base para que todo ocupe el 100% sin bordes blancos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+
+:root {
+  --primary: #2e7d32;
+  --bg-main: #f5f6fa;
+  --bg-light: #ffffff;
+  --bg-sidebar: #e8f5e9;
+  --bg-topbar: #d0f0da;
+  --bg-hover: #c8e6c9;
+  --text-main: #1e1e2f;
+  --text-sidebar: #2e2e2e;
+  --border: #d0d0d0;
+}
+
+body.dark {
+  --primary: #66bb6a;
+  --bg-main: #121212;
+  --bg-light: #1e1e1e;
+  --bg-sidebar: #1b1f1c;
+  --bg-topbar: #1a1d1a;
+  --bg-hover: #2e3b2e;
+  --text-main: #f1f1f1;
+  --text-sidebar: #bdbdbd;
+  --border: #444;
+}
+
